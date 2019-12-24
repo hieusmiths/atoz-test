@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import RouterIndex from './routers/RouterIndex'
+import RouterIndex from './router/RouterIndex'
 import { createStore,compose, applyMiddleware } from 'redux'
-import appReducers from './reducers/index'
+import appReducers from './redux/appReducers'
 import * as serviceWorker from './serviceWorker';
 import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';
