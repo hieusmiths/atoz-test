@@ -28,7 +28,8 @@ axiosInstance.interceptors.request.use(
     return request;
   },
   function(error) {
-    return Promise.reject(error);
+    console.log(error);
+    return false;
   }
 );
 
