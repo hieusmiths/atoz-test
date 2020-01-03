@@ -46,7 +46,9 @@ export default function(
       }
       connectNotifyService({ type, icon, msg });
     }
-  } catch (error) {}
+  } catch (error) {
+    console.log(error);
+  }
 }
 
 const connectNotifyService = function({ type, icon, msg }) {
