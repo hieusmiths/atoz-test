@@ -1,1 +1,3 @@
-export { useNotify } from "./Notifycation";
+import { useNotify } from './Notifycation';
+
+export { useNotify };

@@ -1,10 +1,10 @@
 import { combineReducers } from 'redux';
-import home from './home'
-import category from './category'
+import home from './home';
+import category from './category';
 
 const productReducers = combineReducers({
   home,
-  category
-})
+  category,
+});
 
-export default productReducers
+export default productReducers;

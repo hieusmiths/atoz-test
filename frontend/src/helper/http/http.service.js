@@ -1,5 +1,5 @@
-import apiService from "../api-service";
-import httpNotify from "./http.notify";
+import apiService from '../api-service';
+import httpNotify from './http.notify';
 // interface options {
 //   isErrorNotify = false,
 //     isSuccessNotify = false,

@@ -1,1 +1,1 @@
-export { yupString, yupEmail } from "./schema";
+export { yupString, yupEmail } from './schema';

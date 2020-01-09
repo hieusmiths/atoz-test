@@ -1,4 +1,4 @@
-export default function(
+export default function (
   {
     isErrorNotify = false,
     isSuccessNotify = false,
@@ -7,21 +7,22 @@ export default function(
     errorIcon = undefined,
     successIcon = undefined,
     errorType = undefined,
-    successType = undefined
+    successType = undefined,
   },
-  response
+  response,
 ) {
   try {
     if (response.status === false) {
       if (isErrorNotify === false) return;
       let msg = null; // cấu hình mặc định tại đây
       let icon = null;
-      let type = null;
+      const type = null;
+      console.log(msg, icon, type);
       if (errorMsg !== undefined) {
         msg = errorMsg;
       } else {
-        const CODE = response.code || "DEFAULT_ERROR_CODE";
-        msg = "Chay ham get text by code o day";
+        // const CODE = response.code || 'DEFAULT_ERROR_CODE';
+        msg = 'Chay ham get text by code o day';
       }
       if (errorIcon !== undefined) {
         icon = errorIcon;
@@ -29,12 +30,13 @@ export default function(
       if (errorType !== undefined) {
         icon = errorType;
       }
-      connectNotifyService({ type, icon, msg });
+      // connectNotifyService({ type, icon, msg });
     } else {
       if (isSuccessNotify === false) return;
       let msg = null; // cấu hình mặc định tại đây
       let icon = null;
-      let type = null;
+      const type = null;
+      console.log(msg, icon, type);
       if (successMsg !== undefined) {
         msg = successMsg;
       }
@@ -44,13 +46,13 @@ export default function(
       if (successType !== undefined) {
         icon = successType;
       }
-      connectNotifyService({ type, icon, msg });
+      // connectNotifyService({ type, icon, msg });
     }
   } catch (error) {
     console.log(error);
   }
 }
 
-const connectNotifyService = function({ type, icon, msg }) {
-  console.log("Kết nối và chạy thông béo");
-};
+// const connectNotifyService = function ({ type, icon, msg }) {
+//   console.log('Kết nối và chạy thông béo');
+// };

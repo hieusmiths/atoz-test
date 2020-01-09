@@ -1,25 +1,25 @@
-import React, { Fragment } from "react";
-import { useFormik } from "formik";
-import * as Yup from "yup";
-import { yupString, yupEmail } from "../utils/validate/yup";
+import React, { Fragment } from 'react';
+import { useFormik } from 'formik';
+import * as Yup from 'yup';
+import { yupString, yupEmail } from '../utils/validate/yup';
 
-export default function() {
+export default function () {
   const formik = useFormik({
     initialValues: {
-      email: ""
+      email: '',
     },
     validationSchema: Yup.object({
-      email: yupEmail()
+      email: yupEmail(),
     }),
-    handleBlur: e => {
+    handleBlur: (e) => {
       console.log(e);
     },
-    onSubmit: values => {
+    onSubmit: (values) => {
       alert(JSON.stringify(values, null, 2));
-    }
+    },
   });
   return (
-    <Fragment>
+    <>
       <h1 className="text-center">Formik and Yup</h1>
       <div className="container mt-5 pb-5">
         <form onSubmit={formik.handleSubmit}>
@@ -27,7 +27,7 @@ export default function() {
             id="firstName"
             name="email"
             type="text"
-            {...formik.getFieldProps("email")}
+            {...formik.getFieldProps('email')}
             value={formik.values.email}
           />
           {/* <TextField
@@ -36,9 +36,7 @@ export default function() {
                 name="email"
                 variant="filled"
               /> */}
-          {formik.touched.email && formik.errors.email ? (
-            <div>{formik.errors.email}</div>
-          ) : null}
+          {formik.touched.email && formik.errors.email ? <div>{formik.errors.email}</div> : null}
           <div className="mt-3">
             <button type="submit" className="btn ">
               Submit
@@ -46,6 +44,6 @@ export default function() {
           </div>
         </form>
       </div>
-    </Fragment>
+    </>
   );
 }

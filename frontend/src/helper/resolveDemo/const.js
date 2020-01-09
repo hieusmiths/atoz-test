@@ -1,2 +1,2 @@
-export const demoResolve = "Minh hieu";
-export const demoTwo = "demoTwo";
+export const demoResolve = 'Minh hieu';
+export const demoTwo = 'demoTwo';
